@@ -119,8 +119,8 @@ img {
     align-items: center;
     text-align: center;
     background:
-        linear-gradient(135deg, rgba(244, 232, 216, 0.92) 0%, rgba(232, 213, 196, 0.92) 100%),
-        url('assets/images/love-letter-1.jpg') center/cover no-repeat;
+        linear-gradient(135deg, rgba(244, 232, 216, 0.85) 0%, rgba(232, 213, 196, 0.85) 100%),
+        url('assets/images/background.png') center/cover no-repeat;
     background-attachment: fixed;
     position: relative;
     padding: var(--spacing-xl) var(--spacing-md);
