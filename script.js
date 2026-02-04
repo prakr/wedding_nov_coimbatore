@@ -2,8 +2,8 @@
 // Countdown Timer
 // ===================================
 function initCountdown() {
-    // Set wedding date (June 15, 2026)
-    const weddingDate = new Date('2026-06-15T15:00:00').getTime();
+    // Set wedding date (November 27, 2026 - Cocktail Party Start)
+    const weddingDate = new Date('2026-11-27T18:00:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
@@ -85,24 +85,41 @@ function initScrollAnimations() {
 // ===================================
 function initRSVPForm() {
     const form = document.getElementById('rsvpForm');
-    const attendanceSelect = document.getElementById('attendance');
     const guestsGroup = document.getElementById('guestsGroup');
     const dietaryGroup = document.getElementById('dietaryGroup');
-    const messageGroup = document.getElementById('messageGroup');
     const submitBtn = document.getElementById('submitBtn');
     const formMessage = document.getElementById('formMessage');
 
-    // Show/hide fields based on attendance selection
-    attendanceSelect.addEventListener('change', function() {
-        const isAttending = this.value === 'attending';
+    // Get all event checkboxes
+    const eventCheckboxes = document.querySelectorAll('input[name^="event_"]');
+    const noneCheckbox = document.getElementById('noneCheckbox');
+    const eventDayCheckboxes = Array.from(eventCheckboxes).filter(cb => cb !== noneCheckbox);
 
-        if (isAttending) {
-            guestsGroup.style.display = 'block';
-            dietaryGroup.style.display = 'block';
-        } else {
+    // Handle "None" checkbox - uncheck others when selected
+    noneCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            eventDayCheckboxes.forEach(cb => cb.checked = false);
             guestsGroup.style.display = 'none';
             dietaryGroup.style.display = 'none';
         }
+    });
+
+    // Handle event checkboxes - uncheck "None" when any event is selected
+    eventDayCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                noneCheckbox.checked = false;
+                guestsGroup.style.display = 'block';
+                dietaryGroup.style.display = 'block';
+            } else {
+                // Check if any event is still checked
+                const anyChecked = eventDayCheckboxes.some(cb => cb.checked);
+                if (!anyChecked) {
+                    guestsGroup.style.display = 'none';
+                    dietaryGroup.style.display = 'none';
+                }
+            }
+        });
     });
 
     // Form validation and submission
@@ -116,10 +133,15 @@ function initRSVPForm() {
         // Basic validation
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
-        const attendance = document.getElementById('attendance').value;
+        const anyEventChecked = Array.from(eventCheckboxes).some(cb => cb.checked);
 
-        if (!name || !email || !attendance) {
+        if (!name || !email) {
             showMessage('Please fill in all required fields.', 'error');
+            return;
+        }
+
+        if (!anyEventChecked) {
+            showMessage('Please select which events you will attend.', 'error');
             return;
         }
 
