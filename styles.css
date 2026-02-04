@@ -370,11 +370,11 @@ section {
     border-top: 1px solid rgba(139, 168, 136, 0.15);
 }
 
-/* Day 2 - Evening Dinner with Background */
+/* Day 2 - Evening Dinner with Background (Nov 28) - Page 6 */
 .day-section:nth-of-type(2) {
     background:
-        linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
-        url('assets/images/decoration-page7-000.jpg') center/cover no-repeat;
+        linear-gradient(rgba(255, 255, 255, 0.70), rgba(255, 255, 255, 0.70)),
+        url('assets/images/page6-000.jpg') center/cover no-repeat;
     background-attachment: scroll;
     border-top: 2px solid var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
@@ -497,14 +497,38 @@ section {
     border-radius: 5px;
 }
 
+/* Tamil Brahmin Ceremony Card - Nov 29 Morning */
 .ceremony-card {
-    background: var(--accent-peach);
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)),
+        url('assets/images/ceremony-001.jpg') center/cover no-repeat;
     border: 2px solid var(--primary-color);
     box-shadow: none;
 }
 
 .ceremony-card .event-icon {
     font-size: 4rem;
+}
+
+/* Dinner, Speeches & Toasts Card - Nov 28 Evening */
+.dinner-card {
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)),
+        url('assets/images/page6-000.jpg') center/cover no-repeat;
+    border: 2px solid var(--primary-color);
+    box-shadow: none;
+}
+
+.dinner-card .event-icon {
+    font-size: 4rem;
+}
+
+/* Banana Leaf Lunch Card - Nov 29 Afternoon */
+.day-section.day-highlight .event-card:not(.ceremony-card) {
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+        url('assets/images/banana-leaf-000.jpg') center/cover no-repeat;
+    border: 2px solid var(--primary-color);
 }
 
 /* Venue Photo Gallery */
