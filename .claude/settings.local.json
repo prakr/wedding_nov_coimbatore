@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(open:*)"
+      "Bash(open:*)",
+      "Bash(chmod:*)",
+      "Bash(./download-villa-images.sh:*)",
+      "Bash(ls:*)",
+      "Bash(pdfimages:*)"
     ]
   }
 }

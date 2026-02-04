@@ -1,20 +1,23 @@
 /* ===================================
-   CSS Custom Properties (Theme)
+   CSS Custom Properties (Swedish Summer Wedding Theme)
    =================================== */
 :root {
-    /* Colors */
-    --primary-color: #d4a574;
-    --secondary-color: #8b7355;
-    --accent-color: #f4e8d8;
-    --text-dark: #2c2c2c;
-    --text-light: #666;
+    /* Swedish Summer Colors - Light & Airy */
+    --primary-color: #8BA888;          /* Soft Sage Green */
+    --secondary-color: #B4C7E7;        /* Soft Sky Blue */
+    --accent-color: #FFF9F0;           /* Warm Off-White */
+    --accent-peach: #F5D5CB;           /* Soft Peach */
+    --accent-yellow: #F9E79F;          /* Soft Buttercup */
+    --sand-beige: #F4EAE0;             /* Sandy Beige */
+    --text-dark: #4a4a4a;
+    --text-light: #7a7a7a;
     --white: #ffffff;
-    --success: #4caf50;
-    --error: #f44336;
+    --success: #8BA888;
+    --error: #D2A29F;
 
-    /* Typography */
-    --font-heading: 'Georgia', 'Playfair Display', serif;
-    --font-body: 'Arial', 'Helvetica', sans-serif;
+    /* Typography - Swedish Minimalist */
+    --font-heading: 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Helvetica Neue', 'Arial', sans-serif;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -81,9 +84,10 @@ img {
     right: 0;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     z-index: 1000;
     padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid rgba(139, 168, 136, 0.2);
 }
 
 .nav-list {
@@ -95,12 +99,14 @@ img {
 }
 
 .nav-link {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     padding: var(--spacing-xs) var(--spacing-sm);
     border-bottom: 2px solid transparent;
     transition: all var(--transition-speed);
+    color: var(--text-dark);
+    font-weight: 300;
 }
 
 .nav-link:hover {
@@ -119,7 +125,7 @@ img {
     align-items: center;
     text-align: center;
     background:
-        linear-gradient(135deg, rgba(244, 232, 216, 0.85) 0%, rgba(232, 213, 196, 0.85) 100%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 249, 240, 0.75) 100%),
         url('assets/images/background.png') center/cover no-repeat;
     background-attachment: fixed;
     position: relative;
@@ -135,7 +141,8 @@ img {
     font-size: clamp(2.5rem, 8vw, 5rem);
     color: var(--primary-color);
     margin-bottom: var(--spacing-md);
-    font-weight: 400;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 .name-first, .name-second {
@@ -147,28 +154,41 @@ img {
     font-size: 0.8em;
     margin: 0 var(--spacing-sm);
     color: var(--secondary-color);
+    font-weight: 300;
 }
 
 .wedding-date {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: var(--spacing-xs);
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 .wedding-subtitle {
     font-size: clamp(1rem, 2vw, 1.3rem);
-    color: var(--secondary-color);
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 300;
+}
+
+.cultural-note {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--text-light);
     font-style: italic;
     margin-bottom: var(--spacing-lg);
+    font-weight: 300;
 }
 
 .tagline {
-    font-size: 1.2rem;
-    color: var(--secondary-color);
+    font-size: 1rem;
+    color: var(--primary-color);
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     margin-top: var(--spacing-lg);
+    font-weight: 300;
 }
 
 /* Countdown Timer */
@@ -189,7 +209,7 @@ img {
 
 .countdown-value {
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 300;
     color: var(--primary-color);
     font-family: var(--font-heading);
 }
@@ -197,8 +217,9 @@ img {
 .countdown-label {
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     color: var(--text-light);
+    font-weight: 300;
 }
 
 /* Scroll Indicator */
@@ -248,8 +269,10 @@ section {
 .section-title {
     font-size: clamp(2rem, 5vw, 3rem);
     text-align: center;
-    color: var(--primary-color);
+    color: var(--text-dark);
     margin-bottom: var(--spacing-sm);
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 .section-subtitle {
@@ -276,7 +299,7 @@ section {
    Event Details Section
    =================================== */
 .details {
-    background-color: var(--white);
+    background: var(--white);
 }
 
 .events-grid {
@@ -287,17 +310,19 @@ section {
 }
 
 .event-card {
-    background: var(--accent-color);
-    padding: var(--spacing-lg);
-    border-radius: 10px;
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: 0;
     text-align: center;
-    box-shadow: var(--shadow-md);
-    transition: transform var(--transition-speed);
+    box-shadow: none;
+    transition: all var(--transition-speed);
+    border: 1px solid rgba(139, 168, 136, 0.15);
 }
 
 .event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: none;
+    box-shadow: 0 2px 8px rgba(139, 168, 136, 0.1);
+    border-color: var(--primary-color);
 }
 
 .event-icon {
@@ -337,15 +362,64 @@ section {
 /* Day Sections */
 .day-section {
     margin-bottom: var(--spacing-xl);
-    padding: var(--spacing-lg);
-    background: linear-gradient(135deg, #fafafa 0%, var(--white) 100%);
-    border-radius: 15px;
-    box-shadow: var(--shadow-md);
+    padding: var(--spacing-xl);
+    background: var(--accent-color);
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid rgba(139, 168, 136, 0.15);
+}
+
+/* Day 2 - Evening Dinner with Background */
+.day-section:nth-of-type(2) {
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+        url('assets/images/decoration-page7-000.jpg') center/cover no-repeat;
+    background-attachment: scroll;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Timeline Section */
+.timeline-section {
+    margin-top: var(--spacing-md);
+}
+
+.timeline-title {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: var(--spacing-sm);
+    background: rgba(139, 168, 136, 0.1);
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Event Highlights */
+.event-highlights {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: rgba(139, 168, 136, 0.08);
+    border-radius: 0;
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.highlight-text {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+    font-style: italic;
+    margin: 0;
 }
 
 .day-section.day-highlight {
-    background: linear-gradient(135deg, var(--accent-color) 0%, #f9f5f1 100%);
-    border: 3px solid var(--primary-color);
+    background: var(--sand-beige);
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .day-header {
@@ -354,7 +428,7 @@ section {
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
     padding-bottom: var(--spacing-md);
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 1px solid rgba(139, 168, 136, 0.2);
 }
 
 .day-date {
@@ -364,24 +438,26 @@ section {
     justify-content: center;
     min-width: 100px;
     padding: var(--spacing-md);
-    background: var(--primary-color);
-    color: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
+    background: var(--white);
+    color: var(--primary-color);
+    border-radius: 0;
+    box-shadow: none;
+    border: 2px solid var(--primary-color);
 }
 
 .day-number {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 300;
     font-family: var(--font-heading);
     line-height: 1;
 }
 
 .day-month {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin-top: var(--spacing-xs);
+    font-weight: 300;
 }
 
 .day-title {
@@ -390,21 +466,26 @@ section {
 
 .day-title h3 {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
-    color: var(--primary-color);
+    color: var(--text-dark);
     margin-bottom: var(--spacing-xs);
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 .day-tagline {
-    font-size: 1.1rem;
-    color: var(--secondary-color);
+    font-size: 1rem;
+    color: var(--text-light);
     font-style: italic;
+    font-weight: 300;
 }
 
 .event-card h4 {
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    color: var(--text-dark);
     margin-bottom: var(--spacing-sm);
     font-family: var(--font-heading);
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 .event-note {
@@ -417,8 +498,9 @@ section {
 }
 
 .ceremony-card {
-    background: linear-gradient(135deg, #fff9e6 0%, var(--accent-color) 100%);
+    background: var(--accent-peach);
     border: 2px solid var(--primary-color);
+    box-shadow: none;
 }
 
 .ceremony-card .event-icon {
@@ -429,8 +511,25 @@ section {
 .venue-gallery {
     margin: var(--spacing-xl) 0;
     padding: var(--spacing-xl);
-    background: linear-gradient(135deg, #fafafa 0%, var(--white) 100%);
-    border-radius: 15px;
+    background: var(--white);
+    border-radius: 0;
+    border: none;
+}
+
+/* Villa Gallery */
+.villa-gallery {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(139, 168, 136, 0.2);
+}
+
+.villa-gallery h4 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 .gallery-title {
@@ -459,18 +558,20 @@ section {
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
+    border-radius: 0;
+    box-shadow: none;
     aspect-ratio: 16 / 9;
     background: var(--accent-color);
     cursor: pointer;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    transition: all var(--transition-speed);
+    border: 1px solid rgba(139, 168, 136, 0.15);
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-lg);
+    transform: none;
+    box-shadow: 0 2px 8px rgba(139, 168, 136, 0.1);
     z-index: 10;
+    border-color: var(--primary-color);
 }
 
 .gallery-item img {
@@ -486,12 +587,13 @@ section {
 
 /* Venue Highlight */
 .venue-highlight {
-    background: linear-gradient(135deg, #fff9e6 0%, var(--accent-color) 100%);
+    background: var(--sand-beige);
     padding: var(--spacing-xl);
-    border-radius: 15px;
-    box-shadow: var(--shadow-lg);
+    border-radius: 0;
+    box-shadow: none;
     margin: var(--spacing-xl) 0;
-    border: 2px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .venue-title {
@@ -593,7 +695,7 @@ section {
    Accommodation Section
    =================================== */
 .accommodation {
-    background: var(--white);
+    background: var(--accent-color);
 }
 
 .accommodation-grid {
@@ -604,16 +706,18 @@ section {
 }
 
 .accommodation-card {
-    background: linear-gradient(135deg, #f9f9f9 0%, var(--accent-color) 100%);
-    padding: var(--spacing-lg);
-    border-radius: 15px;
-    box-shadow: var(--shadow-md);
-    transition: transform var(--transition-speed);
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: 0;
+    box-shadow: none;
+    transition: all var(--transition-speed);
+    border: 1px solid rgba(139, 168, 136, 0.15);
 }
 
 .accommodation-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: none;
+    box-shadow: 0 2px 8px rgba(139, 168, 136, 0.1);
+    border-color: var(--primary-color);
 }
 
 .accommodation-icon {
@@ -624,9 +728,11 @@ section {
 
 .accommodation-card h3 {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--text-dark);
     margin-bottom: var(--spacing-md);
     text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 .accommodation-card p {
@@ -655,12 +761,12 @@ section {
 }
 
 .accommodation-note {
-    background: rgba(212, 165, 116, 0.1);
+    background: var(--accent-color);
     padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: 5px;
+    border-radius: 0;
     margin-top: var(--spacing-sm);
     font-size: 0.9rem;
-    border-left: 3px solid var(--primary-color);
+    border-left: 2px solid var(--primary-color);
 }
 
 .accommodation-cta {
@@ -696,16 +802,17 @@ section {
    RSVP Section
    =================================== */
 .rsvp {
-    background: linear-gradient(135deg, #f9f5f1 0%, var(--accent-color) 100%);
+    background: var(--white);
 }
 
 .rsvp-form {
     max-width: 600px;
     margin: 0 auto;
-    background: var(--white);
-    padding: var(--spacing-lg);
-    border-radius: 10px;
-    box-shadow: var(--shadow-lg);
+    background: var(--accent-color);
+    padding: var(--spacing-xl);
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid rgba(139, 168, 136, 0.15);
 }
 
 .form-group {
@@ -770,7 +877,7 @@ section {
 }
 
 .checkbox-label:hover {
-    background: #f0e6d6;
+    background: var(--white);
     border-color: var(--primary-color);
 }
 
@@ -789,7 +896,7 @@ section {
 
 .checkbox-label input[type="checkbox"]:checked + span {
     color: var(--primary-color);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* Form Message */
@@ -887,12 +994,15 @@ section {
     background: var(--primary-color);
     color: var(--white);
     width: 100%;
+    border: none;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 .btn-primary:hover {
-    background: var(--secondary-color);
+    background: var(--text-dark);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 12px rgba(139, 168, 136, 0.3);
 }
 
 .btn-primary:disabled {
@@ -904,38 +1014,48 @@ section {
 .btn-secondary {
     background: var(--white);
     color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 .btn-secondary:hover {
     background: var(--primary-color);
     color: var(--white);
+    border-color: var(--primary-color);
 }
 
 /* ===================================
    Footer
    =================================== */
 .footer {
-    background: var(--primary-color);
-    color: var(--white);
+    background: var(--sand-beige);
+    color: var(--text-dark);
     text-align: center;
     padding: var(--spacing-xl) var(--spacing-md);
+    border-top: 1px solid rgba(139, 168, 136, 0.2);
 }
 
 .footer-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: var(--spacing-sm);
+    font-weight: 300;
+    color: var(--text-light);
 }
 
 .footer-names {
     font-family: var(--font-heading);
     font-size: 2rem;
     margin-bottom: var(--spacing-xs);
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--text-dark);
 }
 
 .footer-date {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-light);
 }
 
 /* ===================================
