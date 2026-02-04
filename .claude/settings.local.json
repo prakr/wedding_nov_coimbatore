@@ -5,7 +5,10 @@
       "Bash(chmod:*)",
       "Bash(./download-villa-images.sh:*)",
       "Bash(ls:*)",
-      "Bash(pdfimages:*)"
+      "Bash(pdfimages:*)",
+      "Bash(pdfinfo:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
