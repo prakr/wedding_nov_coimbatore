@@ -8,7 +8,10 @@
       "Bash(pdfimages:*)",
       "Bash(pdfinfo:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebFetch(domain:chrysalis-emu-7234.squarespace.com)",
+      "Bash(git restore:*)",
+      "Bash(git add:*)"
     ]
   }
 }
