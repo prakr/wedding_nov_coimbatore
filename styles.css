@@ -2,18 +2,18 @@
    CSS Custom Properties (Swedish Summer Wedding Theme)
    =================================== */
 :root {
-    /* Swedish Summer Colors - Light & Airy */
-    --primary-color: #8BA888;          /* Soft Sage Green */
-    --secondary-color: #B4C7E7;        /* Soft Sky Blue */
-    --accent-color: #FFF9F0;           /* Warm Off-White */
-    --accent-peach: #F5D5CB;           /* Soft Peach */
-    --accent-yellow: #F9E79F;          /* Soft Buttercup */
-    --sand-beige: #F4EAE0;             /* Sandy Beige */
-    --text-dark: #4a4a4a;
-    --text-light: #7a7a7a;
+    /* Warm Romantic Colors - Inspired by natural elegance */
+    --primary-color: #B8956A;          /* Warm Gold/Bronze */
+    --secondary-color: #A8896C;        /* Warm Taupe */
+    --accent-color: #FAF7F2;           /* Warm Cream */
+    --accent-peach: #E8D5C4;           /* Warm Beige */
+    --accent-yellow: #D4AF6A;          /* Muted Gold */
+    --sand-beige: #EDE6DC;             /* Warm Sand */
+    --text-dark: #3a3a3a;
+    --text-light: #6a6a6a;
     --white: #ffffff;
-    --success: #8BA888;
-    --error: #D2A29F;
+    --success: #B8956A;
+    --error: #C77B7B;
 
     /* Typography - Swedish Minimalist */
     --font-heading: 'Georgia', 'Times New Roman', serif;
@@ -29,10 +29,10 @@
     /* Transitions */
     --transition-speed: 0.3s;
 
-    /* Shadows */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+    /* Shadows - Warm tones */
+    --shadow-sm: 0 2px 4px rgba(184, 149, 106, 0.08);
+    --shadow-md: 0 4px 6px rgba(184, 149, 106, 0.1);
+    --shadow-lg: 0 10px 20px rgba(184, 149, 106, 0.12);
 }
 
 /* ===================================
