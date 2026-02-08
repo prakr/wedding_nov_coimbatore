@@ -19,7 +19,7 @@
         <ul class="nav-list">
             <li><a href="#home" class="nav-link">Home</a></li>
             <li><a href="#details" class="nav-link">Details</a></li>
-            <li><a href="#accommodation" class="nav-link">Stay</a></li>
+            <li><a href="#travel" class="nav-link">Travel</a></li>
             <li><a href="#rsvp" class="nav-link">RSVP</a></li>
         </ul>
     </nav>
@@ -239,55 +239,144 @@
         </div>
     </section>
 
-    <!-- Accommodation Section -->
-    <section id="accommodation" class="accommodation section-fade">
+    <!-- Travel & Stay Section -->
+    <section id="travel" class="travel section-fade">
         <div class="container">
-            <h2 class="section-title">Stay With Us</h2>
-            <p class="section-subtitle">Make it a weekend getaway at Darza Resorts</p>
+            <h2 class="section-title">Travel & Stay</h2>
+            <p class="section-subtitle">Your journey to our celebration</p>
 
-            <div class="accommodation-grid">
-                <div class="accommodation-card">
-                    <div class="accommodation-icon">🏨</div>
-                    <h3>Luxury Accommodations</h3>
-                    <p>Darza Resorts offers seven room categories with modern Scandinavian design:</p>
-                    <ul class="accommodation-list">
-                        <li>Premium Rooms (275 sq ft)</li>
-                        <li>Garden Rooms with views</li>
-                        <li>Pool Villas with private pools</li>
-                        <li>Two Bedroom Pool Villas</li>
-                        <li>Luxury Group Stay (4,000 sq ft for 23 guests)</li>
-                    </ul>
-                    <p class="accommodation-note">🎁 10% discount on direct bookings</p>
-                </div>
+            <!-- Premium Rooms Section -->
+            <div class="premium-rooms">
+                <h3 class="subsection-title">Premium Rooms at Darza Resort</h3>
+                <div class="room-layout">
+                    <div class="room-info">
+                        <p class="room-intro">We've arranged a special block of Premium Rooms exclusively for our wedding guests at Darza Luxury Resorts.</p>
 
-                <div class="accommodation-card">
-                    <div class="accommodation-icon">✈️</div>
-                    <h3>Getting There</h3>
-                    <p><strong>By Air:</strong> Coimbatore International Airport (CJB) - 45 km from resort</p>
-                    <p><strong>By Train:</strong> Coimbatore Junction Railway Station - 30 km</p>
-                    <p><strong>From City:</strong> 30 minutes drive from Coimbatore city center</p>
-                    <p class="accommodation-note">🚗 Ample parking available at resort</p>
-                    <p class="accommodation-note">📞 Resort Contact: +91 90 8080 8008</p>
-                </div>
+                        <div class="pricing-details">
+                            <h4>Pricing & Details</h4>
+                            <ul class="pricing-list">
+                                <li><strong>1,100 SEK per night</strong></li>
+                                <li>Includes 2 adults + breakfast</li>
+                                <li>Extra adult: 200 SEK/night (with extra bed)</li>
+                                <li>Children below 5 years stay free</li>
+                                <li>Room size: 275 sq ft</li>
+                            </ul>
+                        </div>
 
-                <div class="accommodation-card">
-                    <div class="accommodation-icon">🎉</div>
-                    <h3>Resort Amenities</h3>
-                    <ul class="accommodation-list">
-                        <li>🏊 Private swimming pools</li>
-                        <li>🍽️ Three dining outlets (Ganga, English Club, Mekong)</li>
-                        <li>🎮 Indoor & outdoor games</li>
-                        <li>🎪 Fun Land entertainment area</li>
-                        <li>📶 Wi-Fi throughout property</li>
-                        <li>🌳 Beautiful gardens & mountain views</li>
-                    </ul>
+                    </div>
+
+                    <div class="room-carousel">
+                        <div class="carousel-container">
+                            <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
+                            <div class="carousel-images">
+                                <img src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop/q_80,w_900,dpr_1,f_auto,fl_progressive,c_limit/darza-resorts/DARZA_ROOMS-001_kmu2x9" alt="Premium Room" class="carousel-image active" loading="lazy">
+                                <img src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3335/x_0,y_261,w_5000,h_2813,r_0,c_crop/q_80,w_900,dpr_1,f_auto,fl_progressive,c_limit/darza-resorts/DSC08518_yhlegw" alt="Premium Room Interior" class="carousel-image" loading="lazy">
+                                <img src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop/q_80,w_900,dpr_1,f_auto,fl_progressive,c_limit/darza-resorts/DARZA_ROOMS-006_fztvuh" alt="Room View" class="carousel-image" loading="lazy">
+                                <img src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop/q_80,w_900,dpr_1,f_auto,fl_progressive,c_limit/darza-resorts/DARZA_ROOMS-007_j3hkor" alt="Premium Room Bed" class="carousel-image" loading="lazy">
+                                <img src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop/q_80,w_900,dpr_1,f_auto,fl_progressive,c_limit/darza-resorts/DARZA_ROOMS-010_mvlckc" alt="Room Amenities" class="carousel-image" loading="lazy">
+                            </div>
+                            <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
+                        </div>
+                        <div class="carousel-dots" id="carouselDots"></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="accommodation-cta">
-                <p>Book your stay at Darza Resorts for a memorable wedding weekend!</p>
-                <a href="https://www.darzaresorts.com/" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Book Your Stay</a>
-                <p class="accommodation-contact">Email: <a href="mailto:fom@darzaresorts.com">fom@darzaresorts.com</a> | Phone: <a href="tel:+919080808008">+91 90 8080 8008</a></p>
+            <!-- Travel Support Section -->
+            <div class="travel-support">
+                <h3 class="subsection-title">We're Here to Help</h3>
+                <p class="support-text">Planning your journey to India? We're delighted to help make your travel seamless and your stay unforgettable. Whether you need assistance with flight bookings, hotel reservations, or crafting the perfect Indian adventure beyond our wedding, we're just a message away.</p>
+                <p class="support-text">From navigating travel routes to discovering hidden gems across South India, consider us your personal travel companions for this beautiful journey.</p>
+            </div>
+
+            <!-- Minimum Stay Requirement -->
+            <div class="stay-requirement">
+                <h3 class="subsection-title">Minimum Stay</h3>
+                <div class="requirement-box">
+                    <p class="requirement-main">To fully experience our three-day celebration, we request guests to plan to stay at Darza Resort from:</p>
+                    <p class="requirement-dates"><strong>Thursday, November 26 - Sunday, November 29</strong> (3 nights minimum)</p>
+
+                    <div class="example-itinerary">
+                        <h4>Example: Quick Trip from Sweden</h4>
+                        <ul class="itinerary-list">
+                            <li>Depart Sweden: Wednesday, Nov 25</li>
+                            <li>Arrive Coimbatore: Thursday, Nov 26</li>
+                            <li>Wedding celebrations: Nov 27-29</li>
+                            <li>Depart India: Sunday evening, Nov 29</li>
+                            <li>Arrive Sweden: Monday, Nov 30</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top 10 Experiences -->
+            <div class="top-experiences">
+                <h3 class="subsection-title">Extend Your Stay: Top 10 Experiences Around Our Wedding</h3>
+                <p class="experiences-intro">You've traveled halfway across the world—why not make it the adventure of a lifetime? Here are our handpicked recommendations to explore the magic of South India.</p>
+
+                <div class="experiences-grid">
+                    <div class="experience-card">
+                        <h4>Discover Coimbatore</h4>
+                        <p class="experience-duration">2 days</p>
+                        <p>Explore textile markets, ancient temples, and the vibrant culture of this textile city. Perfect for easing into Indian life before the wedding.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>Hill Station Escape: Ooty, Mudumalai & Coonoor</h4>
+                        <p class="experience-duration">2 nights</p>
+                        <p>Journey through misty tea plantations, wildlife reserves, and colonial charm. The toy train ride is unforgettable.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>The Grand Circuit: Hills to Heritage</h4>
+                        <p class="experience-duration">3 nights</p>
+                        <p>Ooty → Mudumalai → Coonoor → Mysore Palace → Fly from Bangalore. A perfect blend of nature and royal grandeur.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>Kerala Backwaters & Tea Gardens</h4>
+                        <p class="experience-duration">4-5 nights</p>
+                        <p>Munnar's emerald tea estates, Alleppey's floating houseboats, and Kumarakom's serene waters. Pure magic.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>Goa: Beach Bliss</h4>
+                        <p class="experience-duration">4-6 nights</p>
+                        <p>White sand beaches, Portuguese heritage, beachside shacks, and sunset parties. The perfect post-wedding unwind.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>Delhi & Taj Mahal First, Wedding After</h4>
+                        <p class="experience-duration">6-7 nights total</p>
+                        <p>Stockholm → Delhi (2 nights) → Agra & Taj Mahal (1 night) → Coimbatore for wedding → Home. Start with icons, end with celebration.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>Wedding First, Wonders After</h4>
+                        <p class="experience-duration">6-7 nights total</p>
+                        <p>Celebrate with us first, then fly to Delhi (2 nights) → Taj Mahal → Back to Stockholm. Save the best sights for your relaxed return journey.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>Madurai & Rameshwaram Temple Trail</h4>
+                        <p class="experience-duration">2-3 nights</p>
+                        <p>Ancient temples, spiritual energy, and architectural marvels. A deeply moving cultural immersion.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>Kodaikanal: The Princess of Hill Stations</h4>
+                        <p class="experience-duration">2 nights</p>
+                        <p>Mist-covered mountains, pristine lakes, and pine forests. A romantic retreat close to Coimbatore.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>Pondicherry: French Riviera of the East</h4>
+                        <p class="experience-duration">2-3 nights</p>
+                        <p>Colonial boulevards, beach promenades, French cafés, and Auroville's experimental township. A unique Indo-French fusion.</p>
+                    </div>
+                </div>
+
+                <p class="experiences-footer">Need help planning your perfect itinerary? We're excited to help you design your dream Indian adventure!</p>
             </div>
         </div>
     </section>
@@ -309,32 +398,16 @@
                     <input type="email" id="email" name="email" required placeholder="your@email.com">
                 </div>
 
-                <div class="form-group">
-                    <label>Which events will you attend? *</label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="event_day1" value="Nov 27 - Cocktail Party">
-                            <span>Nov 27 - Cocktail Party (Friends)</span>
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="event_day2" value="Nov 28 - Celebration Dinner">
-                            <span>Nov 28 - Celebration Dinner (Friends & Family)</span>
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="event_day3" value="Nov 29 - Wedding Ceremony & Lunch">
-                            <span>Nov 29 - Wedding Ceremony & Lunch</span>
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="event_none" value="Unable to attend" id="noneCheckbox">
-                            <span>Unable to attend any events</span>
-                        </label>
-                    </div>
-                </div>
-
                 <div class="form-group" id="guestsGroup">
                     <label for="guests">Number of Guests *</label>
-                    <input type="number" id="guests" name="guests" min="1" max="5" value="1" required>
+                    <input type="number" id="guests" name="guests" min="1" max="10" value="1" required>
                     <small>Including yourself</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="children">Number of Children Attending</label>
+                    <input type="number" id="children" name="children" min="0" max="10" value="0">
+                    <small>Help us plan for meals, seating, and other arrangements. FYI: Children below 5 years stay free at Darza Resort.</small>
                 </div>
 
                 <div class="form-group" id="dietaryGroup">

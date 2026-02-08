@@ -283,3 +283,53 @@ window.addEventListener('pageshow', function(event) {
         scrollToTop();
     }
 });
+
+// ===================================
+// Image Carousel for Premium Rooms
+// ===================================
+let currentSlide = 0;
+
+function initCarousel() {
+    const images = document.querySelectorAll('.carousel-image');
+    const dotsContainer = document.getElementById('carouselDots');
+    
+    // Create dots
+    images.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+        dot.onclick = () => showSlide(index);
+        dotsContainer.appendChild(dot);
+    });
+}
+
+function moveCarousel(direction) {
+    const images = document.querySelectorAll('.carousel-image');
+    currentSlide += direction;
+    
+    if (currentSlide >= images.length) currentSlide = 0;
+    if (currentSlide < 0) currentSlide = images.length - 1;
+    
+    showSlide(currentSlide);
+}
+
+function showSlide(index) {
+    const images = document.querySelectorAll('.carousel-image');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+    });
+    
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+    
+    currentSlide = index;
+}
+
+// Initialize carousel when DOM is loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousel);
+} else {
+    initCarousel();
+}
