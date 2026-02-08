@@ -1852,6 +1852,12 @@ section {
         --spacing-md: 1.25rem;
     }
 
+    /* Fix for section visibility on mobile - ensure content is always visible */
+    .section-fade {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
     /* Hero Section Mobile */
     .hero {
         min-height: 100vh;
@@ -2037,6 +2043,12 @@ section {
 
 /* Tablets (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
+    /* Ensure sections are visible on tablets too */
+    .section-fade {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
     .experiences-grid {
         grid-template-columns: repeat(2, 1fr);
     }
