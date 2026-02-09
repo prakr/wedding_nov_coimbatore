@@ -108,8 +108,8 @@ img {
     padding: var(--spacing-xs) var(--spacing-sm);
     border-bottom: 2px solid transparent;
     transition: all var(--transition-speed);
-    color: var(--text-dark);
-    font-weight: 300;
+    color: #2a2a2a;
+    font-weight: 600;
 }
 
 .nav-link:hover {
