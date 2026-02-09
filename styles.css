@@ -697,6 +697,12 @@ section {
     font-weight: 500;
 }
 
+.event-details .event-note {
+    background: none;
+    border-radius: 0;
+    padding: var(--spacing-xs) 0;
+}
+
 /* Tamil Brahmin Ceremony Card - Nov 29 Morning */
 .ceremony-card {
     background:
