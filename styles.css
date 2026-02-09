@@ -688,9 +688,7 @@ section {
 
 /* Dinner, Speeches & Toasts Card - Nov 28 Evening */
 .dinner-card {
-    background:
-        linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)),
-        url('assets/images/page6-000.jpg') center/cover no-repeat;
+    background: var(--white);
     border: 2px solid var(--primary-color);
     box-shadow: none;
 }
