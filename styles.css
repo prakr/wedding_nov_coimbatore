@@ -340,13 +340,13 @@ section {
     text-align: center;
     box-shadow: none;
     transition: all var(--transition-speed);
-    border: 1px solid rgba(139, 168, 136, 0.15);
+    border: 2px solid var(--primary-color);
 }
 
 .event-card:hover {
     transform: none;
-    box-shadow: 0 2px 8px rgba(139, 168, 136, 0.1);
-    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(139, 168, 136, 0.15);
+    border-color: var(--secondary-color);
 }
 
 .event-icon {
