@@ -440,8 +440,6 @@ section {
     align-items: center;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-md);
-    border-bottom: 1px solid rgba(139, 168, 136, 0.2);
 }
 
 .day-header-inline .day-date {
