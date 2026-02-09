@@ -536,6 +536,19 @@ section {
     padding: var(--spacing-xs) 0;
 }
 
+.additional-info {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(139, 168, 136, 0.2);
+}
+
+.additional-info .info-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    font-style: italic;
+}
+
 /* Responsive - Stack on mobile */
 @media (max-width: 768px) {
     .split-layout {
