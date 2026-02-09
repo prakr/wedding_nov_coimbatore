@@ -85,42 +85,8 @@ function initScrollAnimations() {
 // ===================================
 function initRSVPForm() {
     const form = document.getElementById('rsvpForm');
-    const guestsGroup = document.getElementById('guestsGroup');
-    const dietaryGroup = document.getElementById('dietaryGroup');
     const submitBtn = document.getElementById('submitBtn');
     const formMessage = document.getElementById('formMessage');
-
-    // Get all event checkboxes
-    const eventCheckboxes = document.querySelectorAll('input[name^="event_"]');
-    const noneCheckbox = document.getElementById('noneCheckbox');
-    const eventDayCheckboxes = Array.from(eventCheckboxes).filter(cb => cb !== noneCheckbox);
-
-    // Handle "None" checkbox - uncheck others when selected
-    noneCheckbox.addEventListener('change', function() {
-        if (this.checked) {
-            eventDayCheckboxes.forEach(cb => cb.checked = false);
-            guestsGroup.style.display = 'none';
-            dietaryGroup.style.display = 'none';
-        }
-    });
-
-    // Handle event checkboxes - uncheck "None" when any event is selected
-    eventDayCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            if (this.checked) {
-                noneCheckbox.checked = false;
-                guestsGroup.style.display = 'block';
-                dietaryGroup.style.display = 'block';
-            } else {
-                // Check if any event is still checked
-                const anyChecked = eventDayCheckboxes.some(cb => cb.checked);
-                if (!anyChecked) {
-                    guestsGroup.style.display = 'none';
-                    dietaryGroup.style.display = 'none';
-                }
-            }
-        });
-    });
 
     // Form validation and submission
     form.addEventListener('submit', function(e) {
@@ -133,15 +99,9 @@ function initRSVPForm() {
         // Basic validation
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
-        const anyEventChecked = Array.from(eventCheckboxes).some(cb => cb.checked);
 
         if (!name || !email) {
             showMessage('Please fill in all required fields.', 'error');
-            return;
-        }
-
-        if (!anyEventChecked) {
-            showMessage('Please select which events you will attend.', 'error');
             return;
         }
 
@@ -156,30 +116,14 @@ function initRSVPForm() {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Submitting...';
 
-        // Submit form using Formspree (or handle locally)
+        // Submit form using Formspree
         submitForm(new FormData(form));
     });
 
     function submitForm(formData) {
-        // Check if Formspree is configured
         const formAction = form.getAttribute('action');
 
-        if (formAction.includes('YOUR_FORM_ID')) {
-            // Formspree not configured - simulate success
-            console.log('Form data:', Object.fromEntries(formData));
-
-            setTimeout(() => {
-                showMessage('We are extremely delighted you are coming! We are thrilled to have you join us and are here to ensure you have a wonderful experience. See you in Coimbatore! 🎉', 'success');
-                form.reset();
-                guestsGroup.style.display = 'none';
-                dietaryGroup.style.display = 'none';
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Submit RSVP';
-            }, 1000);
-            return;
-        }
-
-        // Real Formspree submission
+        // Submit to Formspree via AJAX
         fetch(formAction, {
             method: 'POST',
             body: formData,
@@ -191,10 +135,14 @@ function initRSVPForm() {
             if (response.ok) {
                 showMessage('We are extremely delighted you are coming! We are thrilled to have you join us and are here to ensure you have a wonderful experience. See you in Coimbatore! 🎉', 'success');
                 form.reset();
-                guestsGroup.style.display = 'none';
-                dietaryGroup.style.display = 'none';
             } else {
-                throw new Error('Form submission failed');
+                return response.json().then(data => {
+                    if (data.errors) {
+                        throw new Error(data.errors.map(error => error.message).join(', '));
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                });
             }
         })
         .catch(error => {
