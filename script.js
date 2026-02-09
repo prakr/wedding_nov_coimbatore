@@ -169,7 +169,7 @@ function initRSVPForm() {
             console.log('Form data:', Object.fromEntries(formData));
 
             setTimeout(() => {
-                showMessage('Thank you for your RSVP! We look forward to celebrating with you! 🎉', 'success');
+                showMessage('We are extremely delighted you are coming! We are thrilled to have you join us and are here to ensure you have a wonderful experience. See you in Coimbatore! 🎉', 'success');
                 form.reset();
                 guestsGroup.style.display = 'none';
                 dietaryGroup.style.display = 'none';
@@ -189,7 +189,7 @@ function initRSVPForm() {
         })
         .then(response => {
             if (response.ok) {
-                showMessage('Thank you for your RSVP! We look forward to celebrating with you! 🎉', 'success');
+                showMessage('We are extremely delighted you are coming! We are thrilled to have you join us and are here to ensure you have a wonderful experience. See you in Coimbatore! 🎉', 'success');
                 form.reset();
                 guestsGroup.style.display = 'none';
                 dietaryGroup.style.display = 'none';
