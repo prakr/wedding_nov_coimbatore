@@ -217,7 +217,7 @@ img {
     display: flex;
     gap: var(--spacing-md);
     justify-content: center;
-    margin: var(--spacing-lg) 0;
+    margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
     flex-wrap: wrap;
 }
 
@@ -225,11 +225,11 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 80px;
+    min-width: 70px;
 }
 
 .countdown-value {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 400;
     color: #2a2a2a;
     font-family: var(--font-heading);
@@ -237,7 +237,7 @@ img {
 }
 
 .countdown-label {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     color: #2a2a2a;
