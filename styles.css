@@ -353,6 +353,11 @@ section {
 .event-icon {
     font-size: 3rem;
     margin-bottom: var(--spacing-sm);
+    height: 3.5rem;
+    line-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .event-card h3 {
@@ -713,7 +718,7 @@ section {
 }
 
 .dinner-card .event-icon {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 /* Banana Leaf Lunch Card - Nov 29 Afternoon */
