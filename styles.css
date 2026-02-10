@@ -1464,6 +1464,40 @@ section {
     font-weight: 400;
 }
 
+/* FAQ Special Split Layout (for Isha Yoga) */
+.faq-item-special {
+    margin-bottom: var(--spacing-xl);
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.faq-split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.faq-content {
+    padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.5);
+    border-left: 3px solid var(--primary-color);
+}
+
+.faq-carousel {
+    position: relative;
+}
+
+.faq-carousel .carousel-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #f5f5f5;
+    border: 2px solid var(--primary-color);
+}
+
 /* ===================================
    Responsive Design
    =================================== */
@@ -2143,6 +2177,16 @@ section {
 
     .itinerary-option {
         padding: var(--spacing-sm);
+    }
+
+    /* FAQ Special Split Layout Mobile */
+    .faq-split-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .faq-carousel .carousel-container {
+        aspect-ratio: 16 / 10;
     }
 
     /* Experiences Grid Mobile */

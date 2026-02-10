@@ -281,3 +281,55 @@ if (document.readyState === 'loading') {
 } else {
     initCarousel();
 }
+
+// ===================================
+// Isha Yoga Center Carousel
+// ===================================
+let currentIshaSlide = 0;
+
+function initIshaCarousel() {
+    const images = document.querySelectorAll('.faq-carousel .carousel-image');
+    const dotsContainer = document.getElementById('ishaCarouselDots');
+
+    if (!images.length || !dotsContainer) return;
+
+    // Create dots
+    images.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+        dot.onclick = () => showIshaSlide(index);
+        dotsContainer.appendChild(dot);
+    });
+}
+
+function moveIshaCarousel(direction) {
+    const images = document.querySelectorAll('.faq-carousel .carousel-image');
+    currentIshaSlide += direction;
+
+    if (currentIshaSlide >= images.length) currentIshaSlide = 0;
+    if (currentIshaSlide < 0) currentIshaSlide = images.length - 1;
+
+    showIshaSlide(currentIshaSlide);
+}
+
+function showIshaSlide(index) {
+    const images = document.querySelectorAll('.faq-carousel .carousel-image');
+    const dots = document.querySelectorAll('#ishaCarouselDots .carousel-dot');
+
+    images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+    });
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+
+    currentIshaSlide = index;
+}
+
+// Initialize Isha carousel when DOM is loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initIshaCarousel);
+} else {
+    initIshaCarousel();
+}
