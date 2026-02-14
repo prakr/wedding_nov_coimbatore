@@ -549,9 +549,10 @@ section {
 
 .additional-info .info-note {
     font-size: 1rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     line-height: 1.6;
     font-style: italic;
+    font-weight: 500;
 }
 
 /* Responsive - Stack on mobile */
