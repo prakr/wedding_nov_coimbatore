@@ -217,7 +217,7 @@ img {
     display: flex;
     gap: var(--spacing-md);
     justify-content: center;
-    margin-top: 12rem;
+    margin-top: 16rem;
     margin-bottom: var(--spacing-lg);
     flex-wrap: wrap;
 }
