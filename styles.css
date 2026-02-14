@@ -124,11 +124,12 @@ img {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     position: relative;
     padding: var(--spacing-xl) var(--spacing-md);
+    padding-top: 100px;
     margin-top: 60px;
     overflow: hidden;
 }
