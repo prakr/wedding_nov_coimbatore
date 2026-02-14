@@ -124,12 +124,11 @@ img {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
-    padding: var(--spacing-md);
-    padding-bottom: 80px;
+    padding: var(--spacing-xl) var(--spacing-md);
     margin-top: 60px;
     overflow: hidden;
 }
@@ -145,7 +144,7 @@ img {
         linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(250, 247, 242, 0.45) 100%),
         url('assets/images/tajmahal.png');
     background-size: cover;
-    background-position: center top;
+    background-position: center 55%;
     background-repeat: no-repeat;
     filter: grayscale(100%);
     z-index: -1;
@@ -155,6 +154,7 @@ img {
     animation: fadeInUp 1s ease-out;
     position: relative;
     z-index: 1;
+    margin-top: 200px;
 }
 
 .couple-names {
