@@ -128,8 +128,8 @@ img {
     align-items: center;
     text-align: center;
     position: relative;
-    padding: var(--spacing-xl) var(--spacing-md);
-    padding-bottom: 120px;
+    padding: var(--spacing-md);
+    padding-bottom: 80px;
     margin-top: 60px;
     overflow: hidden;
 }
@@ -145,7 +145,7 @@ img {
         linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(250, 247, 242, 0.45) 100%),
         url('assets/images/tajmahal.png');
     background-size: cover;
-    background-position: center 55%;
+    background-position: center top;
     background-repeat: no-repeat;
     filter: grayscale(100%);
     z-index: -1;
