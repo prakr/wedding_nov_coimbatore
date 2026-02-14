@@ -154,7 +154,6 @@ img {
     animation: fadeInUp 1s ease-out;
     position: relative;
     z-index: 1;
-    margin-top: 200px;
 }
 
 .couple-names {
