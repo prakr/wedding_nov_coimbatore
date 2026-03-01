@@ -333,3 +333,35 @@ if (document.readyState === 'loading') {
 } else {
     initIshaCarousel();
 }
+
+// ===================================
+// Deep Link / Hash Scroll for FAQ
+// ===================================
+function scrollToHash(hash) {
+    if (!hash) return;
+    const target = document.querySelector(hash);
+    if (!target) return;
+
+    const nav = document.querySelector('.nav');
+    const navHeight = nav ? nav.offsetHeight : 0;
+    const extraOffset = 24;
+    const top = target.getBoundingClientRect().top + window.scrollY - navHeight - extraOffset;
+
+    window.scrollTo({ top, behavior: 'smooth' });
+
+    // Briefly highlight the item so the user can spot it easily
+    target.style.transition = 'box-shadow 0.4s ease';
+    target.style.boxShadow = '0 0 0 3px rgba(184, 149, 106, 0.45)';
+    setTimeout(() => { target.style.boxShadow = ''; }, 2500);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash) {
+        // Small delay lets the page fully render before scrolling
+        setTimeout(() => scrollToHash(window.location.hash), 350);
+    }
+});
+
+window.addEventListener('hashchange', () => {
+    scrollToHash(window.location.hash);
+});
